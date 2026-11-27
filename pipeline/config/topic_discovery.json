@@ -1,0 +1,138 @@
+{
+  "_doc": "Parameters for pipeline/scripts/discover_topics.py. Reference fields are multi-source probes (platform rules live in data/taxonomy.json and work the same way): a paper counts as 'core' for one when at least 2 of its 4 sources (concepts, keywords, arXiv categories, title+abstract text) agree. They are used only to evaluate and describe the clusters, never to form them.",
+  "graph": {
+    "candidates": 30,
+    "neighbours": 15,
+    "metadata_weight": 0.1,
+    "metadata_sources": {
+      "keyword": 1.0,
+      "concept": 0.7,
+      "openalex_topic": 0.5,
+      "arxiv": 0.7
+    },
+    "keyword_min_score": 0.3,
+    "concept_min_score": 0.3,
+    "concept_min_level": 2,
+    "openalex_topic_min_score": 0.2,
+    "token_min_df": 3,
+    "token_max_df_share": 0.2
+  },
+  "topics": {
+    "resolutions": [
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "count_range": [
+      8,
+      15
+    ],
+    "min_share": 0.005,
+    "max_share": 0.15,
+    "weights": {
+      "stability": 0.4,
+      "distinctness": 0.2,
+      "core_agreement": 0.2,
+      "coherence": 0.2
+    }
+  },
+  "subtopics": {
+    "resolutions": [
+      0.15,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.65,
+      0.8,
+      1.0,
+      1.25
+    ],
+    "count_range": [
+      3,
+      10
+    ],
+    "min_papers": 50,
+    "weights": {
+      "stability": 0.5,
+      "distinctness": 0.25,
+      "coherence": 0.25
+    }
+  },
+  "stability": {
+    "runs": 5,
+    "sample_share": 0.8
+  },
+  "seed": 42,
+  "reference_fields": {
+    "qec_fault_tolerance": {
+      "label": "QEC / fault tolerance",
+      "concepts": [
+        "Quantum error correction",
+        "Fault tolerance",
+        "Toric code",
+        "Low-density parity-check code",
+        "Topological quantum computer"
+      ],
+      "keywords": "error correct|error-correct|fault.toleran|surface code|stabili[sz]er code|toric code|ldpc|logical qubit|decoder",
+      "arxiv": [],
+      "text": "error.correct|fault.toleran|surface code|logical qubit|stabili[sz]er code|ldpc"
+    },
+    "quantum_machine_learning": {
+      "label": "Quantum machine learning",
+      "concepts": [
+        "Quantum machine learning",
+        "Artificial neural network",
+        "Reinforcement learning"
+      ],
+      "keywords": "machine learning|neural network|reinforcement learning|quantum kernel|reservoir comput",
+      "arxiv": [
+        "cs.LG",
+        "stat.ML",
+        "cs.AI",
+        "cs.NE"
+      ],
+      "text": "machine learning|neural network|reinforcement learning|deep learning|quantum kernel|reservoir comput"
+    },
+    "variational_nisq": {
+      "label": "Variational / NISQ algorithms",
+      "concepts": [],
+      "keywords": "variational|qaoa|nisq|barren plateau",
+      "arxiv": [],
+      "text": "variational quantum|qaoa|\\bvqe\\b|nisq|barren plateau|parameteri[sz]ed quantum circuit"
+    },
+    "sensing_metrology": {
+      "label": "Sensing & metrology",
+      "concepts": [
+        "Quantum metrology",
+        "Metrology",
+        "Magnetometer"
+      ],
+      "keywords": "metrolog|sensing|magnetometr|spin squeezing|fisher information",
+      "arxiv": [],
+      "text": "metrolog|quantum sensing|magnetometr|spin squeez|heisenberg limit|quantum fisher"
+    },
+    "qkd_cryptography": {
+      "label": "QKD & cryptography",
+      "concepts": [
+        "Quantum key distribution",
+        "Quantum cryptography",
+        "Cryptography"
+      ],
+      "keywords": "key distribution|cryptograph|qkd",
+      "arxiv": [
+        "cs.CR"
+      ],
+      "text": "key distribution|\\bqkd\\b|cryptograph"
+    }
+  }
+}

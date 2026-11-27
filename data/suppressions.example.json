@@ -1,0 +1,6 @@
+{
+  "_about": "Copy to data/suppressions.json to exclude listed author profiles from researcher lists and search while retaining paper/institution totals.",
+  "authors": [
+    { "orcid": "0000-0002-1825-0097", "openalex": "A5000000000", "note": "optional note" }
+  ]
+}

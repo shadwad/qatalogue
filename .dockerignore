@@ -1,0 +1,23 @@
+# Allowlist only what Dockerfile needs so data/, logs/, .env, node_modules/ and .venv/ never enter the build context.
+*
+!Dockerfile
+!package.json
+!package-lock.json
+!.npmrc
+!index.html
+!tsconfig.json
+!vite.config.ts
+!site.config.json
+!src
+!src/**
+!shared
+!shared/**
+!server
+!server/**
+!public/*.png
+!public/favicon.ico
+!public/qatalogue.svg
+!public/config/search_acronyms.json
+!pipeline/requirements.lock
+!pipeline/config/scope.json
+!pipeline/config/embedding.json

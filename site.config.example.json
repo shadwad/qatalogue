@@ -1,0 +1,7 @@
+{
+  "_about": "Copy this file to site.config.json and fill in what applies to your deployment. Every field is optional: omitted fields are not shown. Restart the dev server or rebuild after changing it.",
+  "author": { "name": "Operator or Organization", "url": "https://orcid.org/0000-0000-0000-0000" },
+  "copyrightYear": 2026,
+  "contactEmail": "contact@your-domain.example",
+  "repositoryUrl": "https://github.com/your-account/your-fork"
+}

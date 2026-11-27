@@ -1,0 +1,11 @@
+{
+  "_about": "Copy to data/article_overrides.json to override automatic research/non-research classification in classify_articles.py. Supported kinds: research | review | perspective | tutorial | news | editorial | comment | erratum | other.",
+  "papers": {
+    "W0000000000": {
+      "kind": "review",
+      "title": "Example Paper Title",
+      "doi": "10.0000/example.0000",
+      "note": "optional note"
+    }
+  }
+}

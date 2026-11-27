@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Apply the saved/preferred theme before first paint (avoids a dark flash for light-mode users).
+      (function () {
+        try {
+          var saved = localStorage.getItem('qatalogue-theme');
+          var theme = (saved === 'light' || saved === 'dark') ? saved : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/qatalogue.svg" />
+    <title>Qatalogue | Quantum Information Science and Technology Explorer</title>
+    <meta name="description" content="Explore researchers, institutions, and publications in Quantum Information Science and Technology across __VENUE_COUNT__ venues." />
+    <meta name="keywords" content="quantum information science and technology, qist, quantum information science, qis, research discovery, quantum researchers, quantum institutions, physics catalogue, academic explorer" />
+    <meta property="og:title" content="Qatalogue | Quantum Information Science and Technology Explorer" />
+    <meta property="og:description" content="Explore researchers, institutions, and publications in Quantum Information Science and Technology across __VENUE_COUNT__ venues." />
+    <meta property="og:type" content="website" />
+    <style>
+      /* Shown only if the app's scripts never start, since the app replaces it the moment they do. */
+      .load-notice { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; font: 14px/1.6 ui-sans-serif, system-ui, sans-serif; background: #FCFBF8; color: #594F5A; opacity: 0; animation: load-notice-show 0s 8s forwards; }
+      .dark .load-notice { background: #121214; color: #A1A1AA; }
+      .load-notice a { color: inherit; text-decoration: underline; }
+      @keyframes load-notice-show { to { opacity: 1; } }
+    </style>
+  </head>
+  <body>
+    <div id="root"><p class="load-notice"><span>Qatalogue is taking longer than usual to load. If this message stays, <a href="">reload the page</a>.</span></p></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

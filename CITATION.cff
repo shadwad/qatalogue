@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Qatalogue"
+message: "If you use Qatalogue or its derived data and visualizations, please cite it as below."
+type: software
+authors:
+  - given-names: Shadnan Azwad
+    family-names: Khan
+    orcid: "https://orcid.org/0000-0003-2769-6856"
+abstract: "An open bibliometric explorer for quantum information science and technology, built from OpenAlex, ROR, and arXiv metadata."
+license: MIT
+version: "0.1.0"
+date-released: "2026-11-27"
+repository-code: "https://github.com/shadwad/qatalogue"
+url: "https://qatalogue.org"

@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Python dependencies are locked in pipeline/requirements.lock (which Dependabot does not
+  # regenerate); update pipeline/requirements.txt and re-freeze requirements.lock manually.
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

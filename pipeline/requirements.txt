@@ -1,0 +1,8 @@
+# Direct pipeline dependencies (Python 3.12). See requirements-dev.txt to regenerate pipeline/requirements.lock.
+polars==1.44.1          # facts and summaries
+networkx==3.6.1         # author merge evidence graph
+numpy==2.5.4            # topic assignment, embeddings
+igraph==1.0.0           # topic discovery (make topics-discover)
+leidenalg==0.12.0       # topic discovery
+python-dotenv==1.2.3    # .env: contact email, API keys
+rapidfuzz==3.11.0       # name matching

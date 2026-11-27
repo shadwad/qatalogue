@@ -1,0 +1,571 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --font-logo: "Special Gothic Expanded One", sans-serif;
+  --font-display: "Outfit Variable", sans-serif;
+  --font-mono: "Roboto Mono Variable", monospace;
+  --font-sans: "Inter Variable", sans-serif;
+
+  --ease-md3: cubic-bezier(0.2, 0.0, 0, 1.0);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring-gentle: cubic-bezier(0.22, 1.2, 0.36, 1);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1366px;
+  --breakpoint-2xl: 1536px;
+}
+
+@layer base {
+  :root {
+    --primary: #4338CA;
+    --on-primary: #FFFFFF;
+    --background: #F4F2EB;
+    --on-background: #201A23;
+    --surface: #FCFBF8;
+    --on-surface: #1D1720;
+    --surface-variant: #F8F7F4;
+    --on-surface-variant: #594F5A;
+    --outline: rgba(67, 56, 202, 0.28);
+    --outline-variant: rgba(67, 56, 202, 0.16);
+    --popover-shadow: 0 10px 25px -3px rgb(0 0 0 / 0.2), 0 4px 10px -4px rgb(0 0 0 / 0.15);
+    /* Chart series colors: the primary, then a second hue and three more (CustomChart SERIES_LIMIT = 5 series by default). */
+    --chart-second: #c2410c;
+    --chart-3: #56a76a;
+    --chart-4: #884783;
+    --chart-5: #c76ac0;
+  }
+
+  .dark {
+    --primary: #F97316;
+    --on-primary: #18181B;
+    --background: #1E1E22;
+    --on-background: #F4F4F5;
+    --surface: #121214;
+    --on-surface: #F4F4F5;
+    --surface-variant: #09090B;
+    --on-surface-variant: #A1A1AA;
+    --outline: rgba(244, 244, 245, 0.3);
+    --outline-variant: rgba(244, 244, 245, 0.15);
+    /* Depth from a dark drop shadow with a faint halo of the primary. */
+    --popover-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12), 0 16px 40px -12px rgb(0 0 0 / 0.7), 0 0 24px 0 color-mix(in srgb, var(--primary) 10%, transparent);
+    --chart-second: #2b9ed9;
+    /* Dark theme: series 3 to 5 avoid the orange primary and the blue second color. */
+    --chart-3: #6b66b4;
+    --chart-4: #249c74;
+    --chart-5: #aa5830;
+  }
+
+  html,
+  body {
+    margin: 0;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: var(--surface);
+    color: var(--on-background);
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: var(--on-primary);
+  }
+
+  /* Firefox Scrollbar Fallback */
+  @supports (-moz-appearance: none) {
+    * {
+      scrollbar-width: auto;
+      scrollbar-color: var(--outline-variant) transparent;
+    }
+    .dark * {
+      scrollbar-color: color-mix(in srgb, var(--primary) 30%, transparent) transparent;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--outline-variant);
+    border-radius: 6px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--outline);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--primary) 30%, transparent);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in srgb, var(--primary) 50%, transparent);
+    border: 2px solid transparent;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  /* One cursor rule: anything you can press or drag shows a pointer, wherever it is. */
+  button:not(:disabled), input[type="range"]:not(:disabled) { cursor: pointer; }
+  button:disabled, input[type="range"]:disabled { cursor: not-allowed; }
+}
+
+@layer components {
+  .control-select {
+    appearance: none;
+  }
+
+  .dark .control-select {
+    color-scheme: dark;
+  }
+
+  @supports (appearance: base-select) and selector(::picker(select)) {
+    .control-select,
+    .control-select::picker(select) {
+      appearance: base-select;
+    }
+
+    .control-select {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .control-select::picker-icon {
+      display: none;
+    }
+
+    .control-select::picker(select) {
+      max-height: min(20rem, 60dvh);
+      max-width: calc(100vw - 1rem);
+      margin-block: 0.25rem;
+      padding: 0.25rem;
+      border: 1px solid var(--outline);
+      border-radius: 0.75rem;
+      background: var(--surface);
+      color: var(--on-surface);
+      box-shadow: var(--popover-shadow);
+    }
+
+    .control-select option {
+      padding: 0.375rem 0.625rem;
+      border-radius: 0.5rem;
+      font-weight: 400;
+      white-space: normal;
+    }
+
+    .control-select option:hover,
+    .control-select option:focus-visible {
+      background: color-mix(in srgb, var(--on-surface) 5%, transparent);
+    }
+
+    .control-select option:checked {
+      background: color-mix(in srgb, var(--primary) 10%, transparent);
+      color: var(--primary);
+      font-weight: 600;
+    }
+  }
+
+  /* Each horizontal chart shares label and value tracks across all of its rows. */
+  .chart-rows {
+    display: grid;
+    grid-template-columns: fit-content(min(40%, 20rem)) minmax(0, 1fr) max-content;
+    column-gap: 0.75rem;
+  }
+  .chart-rows-stack {
+    grid-template-columns: fit-content(min(40%, 20rem)) minmax(0, 1fr);
+  }
+  .chart-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+  }
+  .chart-row-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+@layer utilities {
+  .shadow-interactive {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -2px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Dark controls: a small drop shadow with a hint of the primary. */
+  .dark .shadow-interactive {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgb(0 0 0 / 0.5), 0 0 8px 0 color-mix(in srgb, var(--primary) 6%, transparent);
+  }
+
+  .shadow-popover {
+    box-shadow: var(--popover-shadow);
+  }
+
+  /* Tactile Slider Thumbs (kept separate so unrecognized vendor pseudo-elements don't invalidate the rule) */
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -2px rgba(0, 0, 0, 0.15) !important;
+    transition: width 150ms var(--ease-spring), height 150ms var(--ease-spring);
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -2px rgba(0, 0, 0, 0.15) !important;
+    transition: width 150ms var(--ease-spring), height 150ms var(--ease-spring);
+  }
+
+  .dark input[type=range]::-webkit-slider-thumb {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 16px 0 color-mix(in srgb, var(--primary) 15%, transparent) !important;
+  }
+  .dark input[type=range]::-moz-range-thumb {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 16px 0 color-mix(in srgb, var(--primary) 15%, transparent) !important;
+  }
+
+  input[type=range]:active::-webkit-slider-thumb {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  input[type=range]:active::-moz-range-thumb {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* Glassmorphism Overlay (Liquid Glass) */
+  .glass-overlay {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px) saturate(180%) contrast(105%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%) contrast(105%);
+  }
+
+  .dark .glass-overlay {
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(18px) saturate(180%) brightness(70%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%) brightness(70%);
+  }
+
+  /* Tasteful Grain Overlay */
+  .bg-grain {
+    overflow: hidden;
+  }
+
+  .bg-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+
+  .dark .bg-grain::after {
+    opacity: 0.15;
+    mix-blend-mode: overlay;
+  }
+
+  /* Lava-Lamp Blobs */
+  .header-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: -2;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: blob-drift 12s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  /* Theme Mapped Colors */
+  .blob-primary {
+    --base-blob-color: var(--primary);
+  }
+
+  .blob-secondary {
+    --base-blob-color: #0284c7;
+  }
+
+  /* Dark Mode Mappings */
+  .dark .blob-primary {
+    --base-blob-color: #B24D00;
+  }
+
+  .dark .blob-secondary {
+    --base-blob-color: #8A0046;
+  }
+
+  @keyframes blob-drift {
+    0% {
+      transform: translate(-56%, -54%) scale(0.87);
+    }
+
+    33% {
+      transform: translate(-43%, -56%) scale(1.01);
+    }
+
+    66% {
+      transform: translate(-38%, -42%) scale(1.10);
+    }
+
+    100% {
+      transform: translate(-51%, -39%) scale(1.02);
+    }
+  }
+
+  /* Refined Apple Glow */
+  .focus-glow:focus {
+    box-shadow: 0 0 28px -4px color-mix(in srgb, var(--primary) 30%, transparent) !important;
+  }
+
+  .dark .focus-glow:focus {
+    box-shadow: 0 0 20px -4px color-mix(in srgb, var(--primary) 18%, transparent) !important;
+  }
+
+  .squircle-sm {
+    border-radius: 16%;
+  }
+
+  /* Press Scale States */
+  .press-scale {
+    transition: transform 150ms var(--ease-spring);
+  }
+
+  .press-scale:active {
+    transform: scale(0.97);
+  }
+
+  .press-scale-sm {
+    transition: transform 150ms var(--ease-spring);
+  }
+
+  .press-scale-sm:active {
+    transform: scale(0.985);
+  }
+
+  /* Modal Animation: a nuanced pop in, a nuanced pop out */
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes modal-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+
+  @keyframes overlay-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes overlay-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  /* --ease-spring overshoots slightly past 1, giving the "pop" */
+  .animate-modal-in {
+    animation: modal-in 320ms var(--ease-spring) forwards;
+  }
+
+  .animate-modal-out {
+    animation: modal-out 180ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+
+  .animate-overlay-in {
+    animation: overlay-in 200ms ease-out forwards;
+  }
+
+  .animate-overlay-out {
+    animation: overlay-out 180ms ease-in forwards;
+  }
+
+  /* Attribution auto-selected for Network view: the pill itself does a nuanced pop (same spring as the
+     pop-outs) while its border and label briefly take the primary colour — like a selected state. */
+  @keyframes attr-pop {
+    0% { transform: scale(1); }
+    35% { transform: scale(1.035); border-color: var(--primary); color: var(--primary); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes attr-pop-static {
+    0%, 60% { border-color: var(--primary); color: var(--primary); }
+    100% { }
+  }
+
+  .animate-attr-pop {
+    animation: attr-pop 600ms var(--ease-spring);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header-blob,
+    .shimmer-band,
+    .shimmer-band-text {
+      animation: none;
+    }
+    .press-scale:active,
+    .press-scale-sm:active {
+      transform: none;
+    }
+    .animate-attr-pop {
+      animation: attr-pop-static 900ms ease-out;
+    }
+    .animate-modal-in,
+    .animate-modal-out,
+    .animate-overlay-in,
+    .animate-overlay-out {
+      animation-duration: 1ms;
+    }
+  }
+
+  .text-fluid-logo {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+  }
+  /* Phones: the logo shares its row with the About, Methodology and theme buttons; under 360px wide, a step smaller so
+     all of it fits beside them. */
+  @media (max-width: 767px) {
+    .text-fluid-logo {
+      font-size: clamp(1.125rem, 5.5vw, 1.625rem);
+    }
+  }
+  @media (max-width: 359px) {
+    .text-fluid-logo {
+      font-size: 0.9375rem;
+    }
+  }
+  /* Short landscape screens (a tablet or laptop 820px tall or less, a phone turned sideways): the header becomes one
+     line (logo, search, buttons), without the subtitle, so the results keep the height. */
+  @media (min-width: 768px) and (max-height: 820px) {
+    header.site-header {
+      padding-block: 0.75rem;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    /* The brand takes the spare room (never less than its logo), so the search stays beside the buttons. */
+    .site-header .site-brand {
+      width: auto;
+      min-width: min-content;
+      flex: 1 1 auto;
+    }
+    .site-header .site-subtitle {
+      display: none;
+    }
+    .site-header .text-fluid-logo {
+      font-size: 1.75rem;
+    }
+    /* The footer too: one slim line. */
+    footer.site-footer {
+      padding-block: 0.5rem;
+    }
+  }
+
+  .px-fluid {
+    padding-left: clamp(1.5rem, 4vw, 2.5rem);
+    padding-right: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  /* The results bar ends where the header's buttons end. Keep in step with .px-fluid, and with the network toolbar's
+     right offset (NetworkView.tsx). */
+  .pr-fluid {
+    padding-right: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  /*
+   * Shimmer (src/components/ui/Shimmer.tsx): a band 40% of the word's width sweeps from left to right every 2s,
+   * crossing the word in a quarter of the cycle. The band moves right while the copy of the word inside it moves
+   * left by the same distance, so the copy stays over the word. Only transforms animate, so a busy page can't stall it.
+   */
+  .shimmer {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    color: var(--color-on-surface-variant);
+  }
+  .shimmer-window {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .shimmer-band {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 40%;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 50%, transparent);
+    animation: shimmer-band 2s linear infinite;
+  }
+  .shimmer-band-text {
+    display: block;
+    width: 250%;
+    color: var(--color-primary);
+    animation: shimmer-band-text 2s linear infinite;
+  }
+  /* The band's left edge runs from -1.2 to 2.8 word widths; its copy runs the opposite way. */
+  @keyframes shimmer-band {
+    from { transform: translateX(-300%); }
+    to { transform: translateX(700%); }
+  }
+  @keyframes shimmer-band-text {
+    from { transform: translateX(120%); }
+    to { transform: translateX(-280%); }
+  }
+
+}
+
+/* A saved image holds the whole figure: its off-screen copy drops the scroll limits. */
+[data-image-export] .overflow-auto,
+[data-image-export] .overflow-x-auto,
+[data-image-export] .overflow-y-auto,
+[data-image-export] [class*="max-h-"] {
+  max-height: none;
+  overflow: visible;
+}
+
+/* Filter lists: a slim scrollbar in the app's outline colour. Its 8px width stands in for the lists' right padding. */
+.custom-scrollbar::-webkit-scrollbar { width: 8px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--outline); border-radius: 9999px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--on-surface-variant); }
+@supports not selector(::-webkit-scrollbar) {
+  .custom-scrollbar { scrollbar-width: thin; scrollbar-color: var(--outline) transparent; }
+}
+
+

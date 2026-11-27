@@ -1,0 +1,5 @@
+# Development tools on top of requirements.txt. Not needed to build the data.
+# To regenerate requirements.lock in a fresh Python 3.12 venv:
+#   pip install -r pipeline/requirements-dev.txt && pip freeze --exclude pip
+-r requirements.txt
+pyflakes==4.1.0         # unused imports and undefined names (make lint)

@@ -1,0 +1,52 @@
+{
+  "years": {
+    "start": 2024,
+    "end": 2025
+  },
+  "corpus_topics": [
+    {
+      "openalex_id": "T10020",
+      "name": "Quantum Information and Cryptography"
+    },
+    {
+      "openalex_id": "T10682",
+      "name": "Quantum Computing Algorithms and Architecture"
+    },
+    {
+      "openalex_id": "T10622",
+      "name": "Quantum Mechanics and Applications"
+    },
+    {
+      "openalex_id": "T11414",
+      "name": "Quantum Optics and Atomic Interactions"
+    },
+    {
+      "openalex_id": "T11804",
+      "name": "Quantum Many-Body Systems"
+    },
+    {
+      "openalex_id": "T10425",
+      "name": "Cold Atom Physics and Bose-Einstein Condensates"
+    },
+    {
+      "openalex_id": "T12612",
+      "name": "Strong Light-Matter Interactions"
+    },
+    {
+      "openalex_id": "T10022",
+      "name": "Semiconductor Quantum Structures and Devices"
+    }
+  ],
+  "venues": [
+    {
+      "openalex_id": "S4210195673",
+      "name": "PRX Quantum",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S4210226432",
+      "name": "Quantum",
+      "requires_topic_filter": true
+    }
+  ]
+}

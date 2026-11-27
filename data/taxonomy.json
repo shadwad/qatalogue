@@ -1,0 +1,1424 @@
+{
+ "_doc": "The topic list. Topics and subtopics follow how research communities divide the field. id: slug of the name. name: sidebar label (about 36 characters at most, the field's own term, one concept, with a second after \"&\" only if it would not be expected under the first; no lists or punctuation; American spelling; \"Quantum\" left out of topic names and kept in subtopics only where it is part of the term). definition: hover text, a short scope list (about 126 characters at most). search_terms: extra terms \"Find a topic\" matches, not shown. rules.keywords: regex over title, OpenAlex keywords and concepts that seeds the subtopic. clusters: clusters in data/topics/discovery.json that correspond to the subtopic. area_clusters: the broader clusters its papers fall in.",
+ "topics": [
+  {
+   "id": "information-theory-and-foundations",
+   "name": "Information theory & foundations",
+   "definition": "Entanglement, nonlocality, resources, channels, discrimination, and the foundations of quantum theory",
+   "search_terms": [
+    "quantum information theory",
+    "quantum correlations"
+   ],
+   "subtopics": [
+    {
+     "id": "quantum-foundations",
+     "name": "Quantum foundations",
+     "definition": "Contextuality, Leggett–Garg tests, Wigner's friend, ontological models, decoherence, quasiprobabilities, and collapse models",
+     "rules": {
+      "keywords": "contextuality|kochen.specker|leggett.garg|macrorealism|ontological model|wigner'?s friend|quantum foundations|generalized probabilistic theor|quantum darwinism|quantum.to.classical|decoherence (theory|and)|quantum backflow|tunnel(l)?ing time|bohmian|kirkwood.dirac|quasiprobabilit|wave.function collapse|collapse model"
+     },
+     "clusters": [
+      "T07.4",
+      "T06.5"
+     ],
+     "area_clusters": [
+      "T06.5",
+      "T07.4"
+     ],
+     "search_terms": [
+      "Kochen-Specker",
+      "macrorealism",
+      "generalized probabilistic theories",
+      "quantum Darwinism",
+      "quantum-to-classical transition",
+      "measurement problem",
+      "Bohmian",
+      "realism"
+     ]
+    },
+    {
+     "id": "causal-structure-and-reference-frames",
+     "name": "Causal structure & reference frames",
+     "definition": "Indefinite causal order, the quantum switch, process matrices, and quantum reference frames",
+     "rules": {
+      "keywords": "indefinite causal|quantum switch|process matri|causal (order|structure|model)|reference frame"
+     },
+     "clusters": [
+      "T07.7"
+     ],
+     "area_clusters": [
+      "T07.7"
+     ],
+     "search_terms": [
+      "causal models",
+      "process matrix"
+     ]
+    },
+    {
+     "id": "entanglement-theory",
+     "name": "Entanglement theory",
+     "definition": "Entanglement witnesses, multipartite entanglement, and its quantification",
+     "rules": {
+      "keywords": "entanglement (detection|witness|measure|quantification|criteri|monotone|of purification|depth)|genuine multipartite entanglement|multipartite entanglement|separab|concurrence|negativity|schmidt number|absolutely maximally entangled"
+     },
+     "clusters": [
+      "T07.1"
+     ],
+     "area_clusters": [
+      "T07.1"
+     ],
+     "search_terms": [
+      "entanglement detection",
+      "entanglement measures",
+      "genuine multipartite entanglement",
+      "concurrence",
+      "negativity",
+      "separability"
+     ]
+    },
+    {
+     "id": "resource-theories",
+     "name": "Resource theories",
+     "definition": "Coherence and entanglement as resources, distillation, and LOCC transformations",
+     "rules": {
+      "keywords": "resource theor|entanglement distillation|coherence (measure|distillation)|incoherent operation|\\blocc\\b|local operations and classical communication|catalys"
+     },
+     "clusters": [
+      "T07.3"
+     ],
+     "area_clusters": [
+      "T07.3"
+     ],
+     "search_terms": [
+      "coherence measures",
+      "catalysis",
+      "entanglement distillation"
+     ]
+    },
+    {
+     "id": "quantum-channels",
+     "name": "Quantum channels",
+     "definition": "Channel capacities, entanglement-assisted communication, and random access codes",
+     "rules": {
+      "keywords": "channel capacity|quantum capacity|holevo|entanglement.assisted (communication|capacity)|communication complexity|random access code|private capacity|superchannel"
+     },
+     "clusters": [
+      "T07.5"
+     ],
+     "area_clusters": [
+      "T07.5"
+     ],
+     "search_terms": [
+      "Holevo",
+      "quantum capacity",
+      "communication complexity",
+      "communication advantage",
+      "superchannels"
+     ]
+    },
+    {
+     "id": "state-discrimination",
+     "name": "State discrimination",
+     "definition": "Optimal and unambiguous discrimination, local distinguishability, data hiding, and hypothesis testing",
+     "rules": {
+      "keywords": "local distinguishab|unextendible product|nonlocality without entanglement|data hiding|local (state )?discrimination|hypothesis testing|channel discrimination|state discrimination|helstrom|stein.s lemma|chernoff (bound|exponent)|unambiguous discrimination|state exclusion"
+     },
+     "clusters": [
+      "T07.10"
+     ],
+     "area_clusters": [
+      "T07.10"
+     ],
+     "search_terms": [
+      "channel discrimination",
+      "Helstrom",
+      "Stein's lemma",
+      "Chernoff bound",
+      "state exclusion",
+      "unextendible product bases"
+     ]
+    },
+    {
+     "id": "bell-nonlocality",
+     "name": "Bell nonlocality",
+     "definition": "Bell and CHSH inequalities, network nonlocality, and nonlocal correlations",
+     "rules": {
+      "keywords": "bell (inequalit|nonlocality|test|violation)|\\bchsh\\b|nonlocal correlation|network nonlocality|local hidden variable|hardy"
+     },
+     "clusters": [
+      "T07.2"
+     ],
+     "area_clusters": [
+      "T07.2"
+     ],
+     "search_terms": [
+      "local hidden variables",
+      "Hardy"
+     ]
+    },
+    {
+     "id": "steering-and-incompatibility",
+     "name": "Steering & incompatibility",
+     "definition": "EPR steering and incompatible measurements",
+     "rules": {
+      "keywords": "steering|measurement incompatibilit|joint measurabil"
+     },
+     "clusters": [
+      "T07.6"
+     ],
+     "area_clusters": [
+      "T07.6"
+     ],
+     "search_terms": [
+      "joint measurability",
+      "measurement incompatibility"
+     ]
+    },
+    {
+     "id": "self-testing",
+     "name": "Self-testing",
+     "definition": "Device-independent certification of states and devices from observed correlations",
+     "rules": {
+      "keywords": "self.testing|device.independent (certification|verification)|state certification|state verification"
+     },
+     "clusters": [
+      "T07.8"
+     ],
+     "area_clusters": [
+      "T07.8"
+     ],
+     "search_terms": [
+      "device-independent verification",
+      "state certification",
+      "state verification"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "algorithms-and-computation",
+   "name": "Algorithms & computation",
+   "definition": "Algorithms for quantum computers, and how they are simulated, trained, and verified",
+   "search_terms": [
+    "quantum algorithms",
+    "quantum computing"
+   ],
+   "subtopics": [
+    {
+     "id": "algorithms-and-complexity",
+     "name": "Algorithms & complexity",
+     "definition": "Grover search, amplitude amplification, QSVT, query and circuit complexity, and cryptographic primitives",
+     "rules": {
+      "keywords": "grover|amplitude (amplification|estimation)|quantum singular value|\\bqsvt\\b|query complexity|complexity class|\\bqma\\b|\\bbqp\\b|oracle|quantum speedup|quantum algorithm for|pseudorandom (state|unitar|density)|quantum (cryptographic )?commitment|position verification|finite automat|quantum advantage (proof|separation)|shallow (quantum )?circuits"
+     },
+     "clusters": [],
+     "area_clusters": [],
+     "search_terms": [
+      "complexity classes",
+      "BQP",
+      "QMA",
+      "quantum speedup",
+      "pseudorandom states",
+      "quantum oracle"
+     ]
+    },
+    {
+     "id": "tomography-and-learning-theory",
+     "name": "Tomography & learning theory",
+     "definition": "State and process tomography, classical shadows, and the sample complexity of learning quantum states",
+     "rules": {
+      "keywords": "tomograph|classical shadow|sample complexity|hamiltonian learning|quantum state (learning|estimation)|quantum learning theory|randomized measurement"
+     },
+     "clusters": [
+      "T03.5"
+     ],
+     "area_clusters": [
+      "T03.5"
+     ],
+     "search_terms": [
+      "randomized measurements",
+      "Hamiltonian learning",
+      "quantum learning theory",
+      "shadow tomography"
+     ]
+    },
+    {
+     "id": "quantum-walks",
+     "name": "Quantum walks",
+     "definition": "Discrete- and continuous-time walks, spatial search, and transport on graphs",
+     "rules": {
+      "keywords": "quantum walk|spatial search|parrondo"
+     },
+     "clusters": [
+      "T02.3"
+     ],
+     "area_clusters": [
+      "T02.3"
+     ],
+     "search_terms": [
+      "quantum transport",
+      "Parrondo"
+     ]
+    },
+    {
+     "id": "classical-simulation-and-advantage",
+     "name": "Classical simulation & advantage",
+     "definition": "Tensor networks, circuit simulation, magic (nonstabilizerness), boson sampling, and random circuit sampling",
+     "rules": {
+      "keywords": "tensor network|matrix product (state|operator)|\\bmps\\b|\\bpeps\\b|nonstabilizerness|magic state(?! distillation)|stabilizer r[eé]nyi|classical simulation of quantum|circuit simulation|clifford\\+t|quantum circuit (compilation|synthesis|optimi[sz]ation)|pauli propagation|boson sampling|gaussian boson|fermion sampling|hafnian|random circuit sampling|quantum supremacy|quantum (computational )?advantage"
+     },
+     "clusters": [
+      "T03.3"
+     ],
+     "area_clusters": [
+      "T03.3",
+      "T08.2"
+     ],
+     "search_terms": [
+      "quantum supremacy",
+      "quantum advantage",
+      "matrix product states",
+      "PEPS",
+      "stabilizer Rényi",
+      "Clifford"
+     ]
+    },
+    {
+     "id": "quantum-machine-learning",
+     "name": "Quantum machine learning",
+     "definition": "Quantum neural networks, kernels, barren plateaus, reservoir computing, and neural-network quantum states",
+     "rules": {
+      "keywords": "quantum machine learning|quantum neural network|quantum kernel|barren plateau|parameteri[sz]ed quantum circuit|variational quantum circuit|quantum reservoir computing|quantum convolutional|neural.network quantum state|neural quantum state"
+     },
+     "clusters": [
+      "T03.2"
+     ],
+     "area_clusters": [
+      "T03.2"
+     ],
+     "search_terms": [
+      "QML",
+      "variational circuits",
+      "parameterized quantum circuits",
+      "neural quantum states",
+      "machine learning for physics"
+     ]
+    },
+    {
+     "id": "optimization-and-annealing",
+     "name": "Optimization & annealing",
+     "definition": "QAOA, quantum annealing, MaxCut and QUBO problems, coherent Ising machines, and analog solvers",
+     "rules": {
+      "keywords": "quantum approximate optimization|\\bqaoa\\b|quantum annealing|combinatorial optimization|maxcut|max.cut|quadratic unconstrained|\\bqubo\\b|portfolio optimi|ising machine|coherent ising|probabilistic (bit|computer)|p-bit|oscillator.based comput|analog (optical )?comput|adiabatic quantum (optimi[sz]ation|computation)|annealer"
+     },
+     "clusters": [
+      "T03.4",
+      "T03.6"
+     ],
+     "area_clusters": [
+      "T03.4",
+      "T03.6"
+     ],
+     "search_terms": [
+      "adiabatic optimization",
+      "combinatorial optimization",
+      "quantum-inspired",
+      "Ising machine",
+      "p-bit"
+     ]
+    },
+    {
+     "id": "quantum-simulation-and-chemistry",
+     "name": "Quantum simulation & chemistry",
+     "definition": "Hamiltonian simulation, VQE, and hybrid algorithms for chemistry and many-body physics",
+     "rules": {
+      "keywords": "quantum simulation|hamiltonian simulation|variational quantum eigensolver|\\bvqe\\b|quantum chemistry|electronic structure|trotter|ground.state (energy|preparation)|quantum phase estimation|lattice gauge theor"
+     },
+     "clusters": [
+      "T03.1"
+     ],
+     "area_clusters": [
+      "T03.1"
+     ],
+     "search_terms": [
+      "digital quantum simulation",
+      "quantum chemistry",
+      "variational quantum eigensolver",
+      "Trotter",
+      "quantum phase estimation",
+      "lattice gauge theory"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "error-correction-and-mitigation",
+   "name": "Error correction & mitigation",
+   "definition": "Codes, fault tolerance, benchmarking, and error mitigation for protecting quantum information",
+   "search_terms": [
+    "QEC",
+    "quantum error correction"
+   ],
+   "subtopics": [
+    {
+     "id": "qec-codes-and-fault-tolerance",
+     "name": "QEC codes & fault tolerance",
+     "definition": "Stabilizer, surface, Floquet, and LDPC codes, logical qubits, decoders, magic-state distillation, and thresholds",
+     "rules": {
+      "keywords": "fault.toleran|surface code|logical qubit|logical error|lattice surgery|magic state distillation|decoder|syndrome (extraction|measurement)|threshold theorem|leakage|stabilizer code|toric code|color code|floquet code|subsystem code|quantum error.correcting code|css code|code distance|approximate quantum error correction|\\bldpc\\b|low.density parity|hypergraph product|bivariate bicycle"
+     },
+     "clusters": [
+      "T10.1"
+     ],
+     "area_clusters": [
+      "T10.1"
+     ],
+     "search_terms": [
+      "quantum error correction",
+      "toric code",
+      "color code",
+      "topological codes",
+      "subsystem codes",
+      "hypergraph product",
+      "lattice surgery"
+     ]
+    },
+    {
+     "id": "bosonic-codes",
+     "name": "Bosonic codes",
+     "definition": "GKP, cat, and binomial codes",
+     "rules": {
+      "keywords": "gottesman.kitaev.preskill|\\bgkp\\b|bosonic (code|qubit|error correction)|cat (code|qubit)|binomial code|grid state"
+     },
+     "clusters": [
+      "T10.3"
+     ],
+     "area_clusters": [
+      "T10.3"
+     ],
+     "search_terms": [
+      "Gottesman-Kitaev-Preskill",
+      "cat qubits",
+      "grid states",
+      "bosonic error correction"
+     ]
+    },
+    {
+     "id": "benchmarking-and-error-mitigation",
+     "name": "Benchmarking & error mitigation",
+     "definition": "Randomized benchmarking, gate-set tomography, noise characterization, zero-noise extrapolation, and error cancellation",
+     "rules": {
+      "keywords": "error mitigation|zero.noise extrapolation|probabilistic error cancellation|symmetry verification|virtual distillation|randomized benchmarking|gate set tomography|benchmark|error characteri[sz]ation|noise (characteri[sz]ation|spectroscopy|learning)|quantum volume|cross.entropy"
+     },
+     "clusters": [
+      "T10.2"
+     ],
+     "area_clusters": [
+      "T10.2"
+     ],
+     "search_terms": [
+      "QCVV",
+      "quantum volume",
+      "cross-entropy benchmarking",
+      "probabilistic error cancellation",
+      "virtual distillation",
+      "noise spectroscopy",
+      "error characterization"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dynamics-and-thermodynamics",
+   "name": "Dynamics & thermodynamics",
+   "definition": "Open, non-Hermitian, and many-body dynamics, thermodynamics, monitored circuits, and driven systems",
+   "search_terms": [
+    "quantum dynamics",
+    "nonequilibrium"
+   ],
+   "subtopics": [
+    {
+     "id": "thermalization-and-ergodicity-breaking",
+     "name": "Thermalization & ergodicity breaking",
+     "definition": "Eigenstate thermalization, quantum chaos, scrambling, random matrices, many-body localization, and scars",
+     "rules": {
+      "keywords": "quantum chaos|scrambling|out.of.time.order|\\botoc\\b|thermali[sz]ation|eigenstate thermalization|random matrix|lyapunov|integrab|many.body locali[sz]ation|anderson locali[sz]ation|ergodicity breaking|mobility edge|hilbert.space fragmentation|disorder.free localization|quasiperiodic|many.body scar|quantum scar|\\bpxp\\b"
+     },
+     "clusters": [
+      "T06.3",
+      "T06.4",
+      "T06.8"
+     ],
+     "area_clusters": [
+      "T06.3",
+      "T06.4",
+      "T06.8"
+     ],
+     "search_terms": [
+      "OTOC",
+      "out-of-time-order",
+      "Anderson localization",
+      "MBL",
+      "Hilbert-space fragmentation",
+      "quantum scars",
+      "PXP",
+      "ETH",
+      "mobility edge"
+     ]
+    },
+    {
+     "id": "monitored-circuits",
+     "name": "Monitored circuits",
+     "definition": "Entanglement phase transitions and measurement-induced transitions in monitored quantum circuits",
+     "rules": {
+      "keywords": "measurement.induced|monitored (quantum )?(circuit|dynamics|system)|entanglement transition|random (quantum )?circuit.*measurement"
+     },
+     "clusters": [
+      "T06.6"
+     ],
+     "area_clusters": [
+      "T06.6"
+     ],
+     "search_terms": [
+      "measurement-induced phase transition",
+      "entanglement transition"
+     ]
+    },
+    {
+     "id": "open-quantum-systems",
+     "name": "Open quantum systems",
+     "definition": "Lindblad and non-Markovian dynamics, quantum trajectories, dissipative steady states, and quantum speed limits",
+     "rules": {
+      "keywords": "open quantum system|lindblad|master equation|non.markovian|quantum trajector|spin.boson|dissipative (dynamics|phase)|liouvillian|quantum speed limit|mandelstam.tamm|margolus.levitin|minimal evolution time"
+     },
+     "clusters": [
+      "T06.1",
+      "T06.7"
+     ],
+     "area_clusters": [
+      "T06.1",
+      "T06.7"
+     ],
+     "search_terms": [
+      "master equation",
+      "Liouvillian",
+      "spin-boson",
+      "Mandelstam-Tamm",
+      "Margolus-Levitin"
+     ]
+    },
+    {
+     "id": "non-hermitian-physics",
+     "name": "Non-Hermitian physics",
+     "definition": "PT-symmetric systems, exceptional points, the skin effect, and Liouvillian spectra",
+     "rules": {
+      "keywords": "non.hermitian|exceptional point|parity.time|\\bpt.symmetr|anti.pt|skin effect|liouvillian exceptional"
+     },
+     "clusters": [],
+     "area_clusters": [],
+     "search_terms": [
+      "parity-time",
+      "PT symmetry",
+      "non-Hermitian skin effect"
+     ]
+    },
+    {
+     "id": "quantum-thermodynamics",
+     "name": "Quantum thermodynamics",
+     "definition": "Entropy production, fluctuation theorems, Landauer's principle, heat engines, refrigerators, and quantum batteries",
+     "rules": {
+      "keywords": "quantum thermodynamic|heat engine|entropy production|work extraction|fluctuation theorem|quantum refrigerat|landauer|thermal machine|ergotropy|mpemba|work (statistics|distribution|fluctuation)|thermodynamic uncertainty|stochastic thermodynamic|maxwell.s demon|information thermodynamic|thermodynamics of (quantum|information|coherence)|refrigerat|otto (cycle|engine)|carnot|quantum batter|absorption (machine|refrigerator)|heat pump|quantum engine"
+     },
+     "clusters": [
+      "T06.2",
+      "T11.1",
+      "T11.2"
+     ],
+     "area_clusters": [
+      "T06.2",
+      "T11.1",
+      "T11.2"
+     ],
+     "search_terms": [
+      "ergotropy",
+      "work extraction",
+      "thermal machines",
+      "quantum engines",
+      "Otto cycle",
+      "Mpemba",
+      "thermodynamic uncertainty relations"
+     ]
+    },
+    {
+     "id": "floquet-systems-and-time-crystals",
+     "name": "Floquet systems & time crystals",
+     "definition": "Floquet engineering, prethermalization, and discrete time crystals in periodically driven systems",
+     "rules": {
+      "keywords": "floquet|time crystal|periodically driven|prethermali|kinetic driving"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T02.2"
+     ],
+     "search_terms": [
+      "periodic driving",
+      "driven many-body systems"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ultracold-gases-and-quantum-matter",
+   "name": "Ultracold gases & quantum matter",
+   "definition": "Bose and Fermi gases, topological phases, and correlated lattice systems, in materials and in quantum simulators",
+   "search_terms": [
+    "cold atoms",
+    "quantum gases",
+    "many-body physics"
+   ],
+   "subtopics": [
+    {
+     "id": "topological-phases",
+     "name": "Topological phases",
+     "definition": "Topological bands, edge states, quantum Hall physics, anyons, Majorana modes, and topological order",
+     "rules": {
+      "keywords": "topological (phase|insulator|order|edge|invariant|superconduct)|chern (number|insulator)|edge state|quantum hall|anyon|majorana|su-schrieffer-heeger|\\bssh model|symmetry.protected topological|fracton|berry curvature|synthetic gauge|artificial gauge"
+     },
+     "clusters": [
+      "T02.2"
+     ],
+     "area_clusters": [
+      "T02.2"
+     ],
+     "search_terms": [
+      "topological insulators",
+      "Chern number",
+      "SSH model",
+      "Berry curvature",
+      "synthetic gauge fields",
+      "fractons",
+      "symmetry-protected",
+      "Thouless pump",
+      "topological superconductors"
+     ]
+    },
+    {
+     "id": "correlated-lattice-systems",
+     "name": "Correlated lattice systems",
+     "definition": "Hubbard and t-J models, Mott insulators, and quantum magnets and spin liquids, in materials and simulators",
+     "rules": {
+      "concepts": [
+       "Mott insulator",
+       "Hubbard model",
+       "Spin liquid",
+       "Quantum spin liquid",
+       "Strongly correlated material",
+       "Kondo effect",
+       "Heavy fermion",
+       "Frustration"
+      ],
+      "keywords": "hubbard|mott (insulator|transition)|spin liquid|non.fermi liquid|kondo|heavy.fermion|strongly correlated|frustrat|cuprate|moir[eé]|twisted bilayer|t.j model|antiferromagnet|quantum magnet|luttinger liquid|wigner crystal",
+      "arxiv": [
+       "cond-mat.str-el"
+      ],
+      "text": "mott insulat|hubbard model|spin liquid|non-fermi liquid|kondo|heavy fermion|strongly correlated electron|frustrated (quantum )?magnet|cuprate|moir[eé]|twisted bilayer"
+     },
+     "clusters": [],
+     "area_clusters": [],
+     "search_terms": [
+      "Kondo",
+      "frustrated magnets",
+      "cuprates",
+      "moiré",
+      "twisted bilayer",
+      "Luttinger liquid"
+     ]
+    },
+    {
+     "id": "fermi-gases",
+     "name": "Fermi gases",
+     "definition": "BCS–BEC crossover, unitary gases, fermionic superfluids, polarons, and imbalanced mixtures",
+     "rules": {
+      "keywords": "fermi gas|fermionic (superfluid|atoms|gas|mixture)|bcs.bec|bec.bcs|unitary fermi|unitarity limit|fermi polaron|polarons? in (a |an )?(ultracold |imbalanced )?fermi|spin.imbalanced|imbalanced fermi|\\bfflo\\b|degenerate fermi|fermi superfluid"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T02.1"
+     ],
+     "search_terms": [
+      "strongly interacting",
+      "BCS-BEC",
+      "unitary Fermi gas",
+      "FFLO",
+      "Tan contact"
+     ]
+    },
+    {
+     "id": "bose-gases-and-condensates",
+     "name": "Bose gases & condensates",
+     "definition": "Superfluidity, vortices, solitons, spinor and spin–orbit-coupled condensates, dipolar gases, droplets, and supersolids",
+     "rules": {
+      "keywords": "bose.einstein condensat|superfluid|quantized vorti|vortex (lattice|dipole|ring|nucleation|dynamics|reconnection)|vortices in (a |the )?(bose|condensate|superfluid)|(dark|bright|matter.wave) soliton|gross.pitaevskii|spinor (bose|condensate|gas)|spin.orbit.coupled (bose|condensate|gas)|bose gas|bose mixture|bose polaron|quantum turbulence|tonks|lieb.liniger|atom laser|bose.hubbard|dipolar (bose|condensate|gas|quantum gas|atoms|supersolid)|supersolid|quantum droplet|self.bound droplet|roton|magnetic atoms|dysprosium|erbium atoms|lee.huang.yang"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T02.1"
+     ],
+     "search_terms": [
+      "Bose-Einstein condensates",
+      "BEC",
+      "quantum turbulence",
+      "Gross-Pitaevskii",
+      "Tonks",
+      "Lieb-Liniger",
+      "spinor gases",
+      "roton",
+      "Bose-Hubbard"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "quantum-optics-and-light-matter",
+   "name": "Quantum optics & light–matter",
+   "definition": "Photon sources, structured light, cavity QED, polaritons, optomechanics, magnonics, and strong-field optics",
+   "search_terms": [
+    "light-matter interaction",
+    "photonics"
+   ],
+   "subtopics": [
+    {
+     "id": "cavity-and-waveguide-qed",
+     "name": "Cavity & waveguide QED",
+     "definition": "Emitters coupled to cavities and waveguides, superradiance, subradiance, and giant atoms",
+     "rules": {
+      "keywords": "cavity quantum electrodynamics|cavity qed|waveguide (quantum electrodynamics|qed)|superradian|subradian|giant atom|dicke model|rabi model|jaynes.cummings|collective (spontaneous )?emission|photon blockade|atom.cavity|strong coupling regime|ultrastrong coupling"
+     },
+     "clusters": [
+      "T01.1",
+      "T01.6"
+     ],
+     "area_clusters": [
+      "T01.1",
+      "T01.6"
+     ],
+     "search_terms": [
+      "Dicke model",
+      "Rabi model",
+      "Jaynes-Cummings",
+      "photon blockade",
+      "ultrastrong coupling"
+     ]
+    },
+    {
+     "id": "strong-field-and-attosecond-optics",
+     "name": "Strong-field & attosecond optics",
+     "definition": "High-harmonic generation, strong-field ionization, and attosecond physics with quantum light",
+     "rules": {
+      "keywords": "strong.field|attosecond|high.harmonic generation|above.threshold ionization|tunnel(ing)? ionization|intense laser"
+     },
+     "clusters": [
+      "T01.5"
+     ],
+     "area_clusters": [
+      "T01.5"
+     ],
+     "search_terms": [
+      "HHG",
+      "above-threshold ionization"
+     ]
+    },
+    {
+     "id": "cavity-magnonics",
+     "name": "Cavity magnonics",
+     "definition": "Magnon–photon coupling, YIG spheres, and hybrid magnonic systems",
+     "rules": {
+      "keywords": "magnon|yttrium iron garnet|\\byig\\b|cavity magnonics|magnomechanic"
+     },
+     "clusters": [
+      "T01.4"
+     ],
+     "area_clusters": [
+      "T01.4"
+     ],
+     "search_terms": [
+      "magnons",
+      "magnomechanics",
+      "yttrium iron garnet"
+     ]
+    },
+    {
+     "id": "optomechanics",
+     "name": "Optomechanics",
+     "definition": "Mechanical resonators, levitated nanoparticles, and optomechanical entanglement",
+     "rules": {
+      "keywords": "optomechan|mechanical (resonator|oscillator|squeezing)|levitated|ground.state cooling|phonon laser"
+     },
+     "clusters": [
+      "T05.4"
+     ],
+     "area_clusters": [
+      "T05.4"
+     ],
+     "search_terms": [
+      "levitated systems",
+      "levitated optomechanics",
+      "phonon laser",
+      "ground-state cooling"
+     ]
+    },
+    {
+     "id": "polaritons-and-2d-materials",
+     "name": "Polaritons & 2D materials",
+     "definition": "Strong light–matter coupling in semiconductors, TMDs, and van der Waals heterostructures, and polariton condensates",
+     "rules": {
+      "keywords": "polariton|exciton|transition metal dichalcogenide|van der waals heterostructure|moir[eé] (exciton|superlattice)|microcavit|2d material|two-dimensional (material|semiconductor)|plasmon"
+     },
+     "clusters": [
+      "T01.2"
+     ],
+     "area_clusters": [
+      "T01.2"
+     ],
+     "search_terms": [
+      "exciton-polaritons",
+      "excitons",
+      "transition metal dichalcogenides",
+      "moiré excitons",
+      "plasmonics",
+      "microcavities"
+     ]
+    },
+    {
+     "id": "structured-light",
+     "name": "Structured light",
+     "definition": "Orbital angular momentum, vortex and vector beams, optical skyrmions, and high-dimensional spatial entanglement",
+     "rules": {
+      "keywords": "orbital angular momentum|structured light|optical vort|vortex beam|vector (beam|vortex)|spin.orbit (interaction|coupling) of light|spatial modes?|laguerre.gauss|optical skyrmion|high.dimensional (entanglement|quantum|photonic)"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T01.3"
+     ],
+     "search_terms": [
+      "OAM",
+      "optical vortices",
+      "twisted light",
+      "Laguerre-Gauss"
+     ]
+    },
+    {
+     "id": "photon-sources-and-entanglement",
+     "name": "Photon sources & entanglement",
+     "definition": "Down-conversion, four-wave mixing, quantum-dot emitters, Hong–Ou–Mandel interference, and integrated photonics",
+     "rules": {
+      "keywords": "parametric down.conversion|spdc|photon pair|entangled photon|hong.ou.mandel|single.photon (source|emitter|emission)|four.wave mixing|biphoton|polarization entanglement|time.bin|frequency.bin|indistinguishab|quantum dot.*(single.photon|photon source|entangled photon)|integrated (quantum )?photonic|photonic (chip|integrated circuit)"
+     },
+     "clusters": [
+      "T01.3"
+     ],
+     "area_clusters": [
+      "T01.3"
+     ],
+     "search_terms": [
+      "SPDC",
+      "parametric down-conversion",
+      "entangled photons",
+      "single-photon sources",
+      "biphotons",
+      "time-bin",
+      "frequency-bin",
+      "polarization entanglement"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atomic-physics-and-precision-measurement",
+   "name": "Atomic physics & precision measurement",
+   "definition": "Clocks, magnetometers, atom interferometers, fundamental-physics tests, molecules, laser cooling, and Rydberg atoms",
+   "search_terms": [
+    "AMO",
+    "atoms",
+    "molecules"
+   ],
+   "subtopics": [
+    {
+     "id": "tests-of-fundamental-physics",
+     "name": "Tests of fundamental physics",
+     "definition": "Dark-matter and new-force searches, equivalence-principle and Lorentz tests, electric dipole moments, and tests of quantum gravity",
+     "rules": {
+      "keywords": "dark matter|axion|beyond the standard model|fifth force|equivalence principle|quantum gravity|gravitational (redshift|time dilation|entanglement|wave detector)|tests? of general relativity|lorentz violation|\\bedm\\b|symmetry violation|neutron lifetime"
+     },
+     "clusters": [
+      "T04.9"
+     ],
+     "area_clusters": [
+      "T04.9"
+     ],
+     "search_terms": [
+      "gravity",
+      "dark matter",
+      "axions",
+      "EDM",
+      "fifth force",
+      "Lorentz violation",
+      "gravitational entanglement",
+      "general relativity"
+     ]
+    },
+    {
+     "id": "ultracold-molecules-and-collisions",
+     "name": "Ultracold molecules & collisions",
+     "definition": "Polar and laser-cooled molecules, Feshbach resonances, three-body physics, and Efimov states",
+     "rules": {
+      "keywords": "ultracold molecule|polar molecule|feshbach|efimov|three.body (recombination|loss|problem)|scattering length|photoassociat|atom.molecule|cold collision|molecular (laser )?cooling"
+     },
+     "clusters": [
+      "T04.1"
+     ],
+     "area_clusters": [
+      "T04.1"
+     ],
+     "search_terms": [
+      "photoassociation",
+      "scattering length",
+      "few-body physics",
+      "ultracold collisions",
+      "ultracold chemistry"
+     ]
+    },
+    {
+     "id": "rydberg-physics",
+     "name": "Rydberg physics",
+     "definition": "Rydberg states and molecules, EIT, Autler–Townes spectroscopy, and microwave electrometry",
+     "rules": {
+      "keywords": "rydberg (atom|state|electrometr|sensor|molecule|excitation)|electromagnetically induced transparency|autler.townes|microwave electrometr|rydberg.*sens"
+     },
+     "clusters": [
+      "T04.5"
+     ],
+     "area_clusters": [
+      "T04.5"
+     ],
+     "search_terms": [
+      "electromagnetically induced transparency",
+      "Rydberg sensing",
+      "radio-frequency sensing"
+     ]
+    },
+    {
+     "id": "laser-cooling-and-tweezers",
+     "name": "Laser cooling & tweezers",
+     "definition": "Magneto-optical traps, optical tweezers, dipole traps, and preparing and imaging atom arrays",
+     "rules": {
+      "keywords": "laser cooling|magneto.optical trap|\\bmot\\b|optical tweezer|atom array|sideband cooling|evaporative cooling|atom trapping|atom chip"
+     },
+     "clusters": [
+      "T04.4"
+     ],
+     "area_clusters": [
+      "T04.4"
+     ],
+     "search_terms": [
+      "MOT",
+      "atom chip",
+      "sideband cooling",
+      "evaporative cooling",
+      "optical trapping"
+     ]
+    },
+    {
+     "id": "atomic-clocks-and-spectroscopy",
+     "name": "Atomic clocks & spectroscopy",
+     "definition": "Optical and nuclear clocks, frequency standards, hyperfine structure, isotope shifts, and QED tests",
+     "rules": {
+      "keywords": "optical (lattice |atomic |ion )?clock|atomic clock|nuclear clock|frequency standard|clock transition|ramsey spectroscopy|coherent population trapping|hyperfine (structure|splitting)|isotope shift|qed correction|bound.state qed|precision spectroscopy|ionization (energy|potential)|polarizabilit|lifetime measurement|transition frequenc|electric dipole moment"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T04.3"
+     ],
+     "search_terms": [
+      "frequency metrology",
+      "optical lattice clocks",
+      "precision spectroscopy",
+      "Ramsey spectroscopy",
+      "timekeeping"
+     ]
+    },
+    {
+     "id": "atom-interferometry",
+     "name": "Atom interferometry",
+     "definition": "Matter-wave interferometers, gravimeters, accelerometers, and gyroscopes",
+     "rules": {
+      "keywords": "atom interferomet|matter.wave interferomet|inertial sens|gravimet|accelerometer|gyroscope|large momentum transfer"
+     },
+     "clusters": [
+      "T08.3"
+     ],
+     "area_clusters": [
+      "T08.3"
+     ],
+     "search_terms": [
+      "inertial sensing",
+      "large momentum transfer",
+      "matter waves"
+     ]
+    },
+    {
+     "id": "atomic-magnetometry",
+     "name": "Atomic magnetometry",
+     "definition": "Optically pumped, vapor-cell, and SERF magnetometers",
+     "rules": {
+      "keywords": "atomic magnetometer|optically pumped magnetometer|vapou?r cell|spin.exchange relaxation|\\bserf\\b|comagnetometer|alkali.metal vapou?r|spin noise spectroscopy"
+     },
+     "clusters": [
+      "T04.7"
+     ],
+     "area_clusters": [
+      "T04.7"
+     ],
+     "search_terms": [
+      "atomic magnetometers",
+      "spin noise spectroscopy",
+      "comagnetometers",
+      "vapour cell"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "metrology-and-sensing",
+   "name": "Metrology & sensing",
+   "definition": "Estimation theory, squeezing, entanglement-enhanced sensing, illumination, and nonclassical states",
+   "search_terms": [
+    "quantum metrology",
+    "quantum sensing"
+   ],
+   "subtopics": [
+    {
+     "id": "quantum-metrology-and-estimation",
+     "name": "Quantum metrology & estimation",
+     "definition": "Quantum Fisher information, Cramér–Rao bounds, squeezing, illumination, imaging, weak measurements, and uncertainty relations",
+     "rules": {
+      "keywords": "quantum metrology|quantum fisher information|parameter estimation|cram[eé]r.rao|quantum sensing|heisenberg (limit|scaling)|thermometr|multiparameter estimation|super.?resolution|spin squeez|squeezed (light|state|vacuum)|one.axis twisting|entanglement.enhanced|standard quantum limit|quantum.enhanced (sensing|metrology|interferometr)|weak value|weak measurement|uncertainty relation|quantum illumination|quantum radar|quantum lidar|target detection|quantum imaging|ghost imaging"
+     },
+     "clusters": [
+      "T08.1"
+     ],
+     "area_clusters": [
+      "T08.1"
+     ],
+     "search_terms": [
+      "parameter estimation",
+      "Heisenberg limit",
+      "standard quantum limit",
+      "spin squeezing",
+      "quantum sensing",
+      "quantum radar",
+      "quantum lidar",
+      "target detection",
+      "thermometry",
+      "superresolution"
+     ]
+    },
+    {
+     "id": "nonclassical-states",
+     "name": "Nonclassical states",
+     "definition": "Cat states, Wigner negativity, and non-Gaussian states",
+     "rules": {
+      "keywords": "schr[öo]dinger cat|cat state|non.gaussian|wigner (function|negativity)|photon subtraction|nonclassical(ity| state| light)|sub.planck"
+     },
+     "clusters": [
+      "T08.2"
+     ],
+     "area_clusters": [
+      "T08.2"
+     ],
+     "search_terms": [
+      "Schrödinger cat",
+      "photon subtraction",
+      "sub-Planck",
+      "Wigner function"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "communication-and-networks",
+   "name": "Communication & networks",
+   "definition": "Quantum key distribution, networks, repeaters, memories, teleportation, and randomness",
+   "search_terms": [
+    "quantum communication",
+    "quantum cryptography"
+   ],
+   "subtopics": [
+    {
+     "id": "graph-states-and-mbqc",
+     "name": "Graph states & MBQC",
+     "definition": "Multiphoton entanglement, graph and GHZ states, fusion, and measurement-based quantum computing",
+     "rules": {
+      "keywords": "graph state|cluster state|measurement.based quantum computation|\\bmbqc\\b|fusion.based|ghz state|blind quantum computation|photonic quantum comput|linear optical quantum"
+     },
+     "clusters": [
+      "T09.3"
+     ],
+     "area_clusters": [
+      "T09.3"
+     ],
+     "search_terms": [
+      "photonic quantum computing",
+      "cluster states",
+      "fusion-based",
+      "blind quantum computation",
+      "linear optical quantum computing"
+     ]
+    },
+    {
+     "id": "discrete-variable-qkd",
+     "name": "Discrete-variable QKD",
+     "definition": "BB84, decoy-state, measurement-device-independent, twin-field, and device-independent protocols and their security",
+     "rules": {
+      "keywords": "quantum key distribution|\\bqkd\\b|secret key rate|decoy.state|twin.field|measurement.device.independent|security proof|privacy amplification|quantum cryptograph"
+     },
+     "clusters": [
+      "T09.1"
+     ],
+     "area_clusters": [
+      "T09.1"
+     ],
+     "search_terms": [
+      "quantum key distribution",
+      "quantum cryptography",
+      "privacy amplification",
+      "secret key rate"
+     ]
+    },
+    {
+     "id": "continuous-variable-qkd",
+     "name": "Continuous-variable QKD",
+     "definition": "Gaussian and discrete-modulation protocols and composable security",
+     "rules": {
+      "keywords": "continuous.variable quantum key|\\bcv.?qkd\\b"
+     },
+     "clusters": [
+      "T09.6"
+     ],
+     "area_clusters": [
+      "T09.6"
+     ],
+     "search_terms": [
+      "CV-QKD",
+      "quantum key distribution"
+     ]
+    },
+    {
+     "id": "quantum-randomness",
+     "name": "Quantum randomness",
+     "definition": "Quantum and certified random number generation",
+     "rules": {
+      "keywords": "random number generat|\\bqrng\\b|certified randomness|randomness (generation|certification|expansion)|device.independent randomness"
+     },
+     "clusters": [
+      "T09.5"
+     ],
+     "area_clusters": [
+      "T09.5"
+     ],
+     "search_terms": [
+      "QRNG",
+      "randomness certification",
+      "randomness expansion"
+     ]
+    },
+    {
+     "id": "quantum-networks-and-memories",
+     "name": "Quantum networks & memories",
+     "definition": "Repeaters, memories, entanglement distribution, teleportation, state transfer, and distributed quantum computing",
+     "rules": {
+      "keywords": "quantum repeater|quantum network|quantum memor|entanglement (distribution|swapping|routing)|quantum internet|quantum transduc|modular quantum|teleportation|state transfer|quantum cloning|telecloning|distributed quantum comput"
+     },
+     "clusters": [
+      "T09.2",
+      "T09.4"
+     ],
+     "area_clusters": [
+      "T09.2",
+      "T09.4"
+     ],
+     "search_terms": [
+      "quantum internet",
+      "entanglement swapping",
+      "entanglement routing",
+      "quantum transduction",
+      "modular quantum computing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "qubit-hardware-and-control",
+   "name": "Qubit hardware & control",
+   "definition": "Superconducting, semiconductor, color-center, trapped-ion, and neutral-atom qubits, and how they are controlled",
+   "search_terms": [
+    "quantum hardware",
+    "qubit platforms"
+   ],
+   "subtopics": [
+    {
+     "id": "quantum-control",
+     "name": "Quantum control",
+     "definition": "Optimal and robust control, dynamical decoupling, shortcuts to adiabaticity, and geometric and holonomic gates",
+     "rules": {
+      "keywords": "optimal control|quantum control|shortcuts? to adiabaticity|counterdiabatic|dynamical decoupling|composite pulse|pulse (shaping|design)|stimulated raman adiabatic|\\bstirap\\b|robust control|holonomic|geometric (quantum )?(gate|computation|phase gate)|nonadiabatic geometric"
+     },
+     "clusters": [
+      "T05.3",
+      "T04.8"
+     ],
+     "area_clusters": [
+      "T04.8",
+      "T05.3"
+     ],
+     "search_terms": [
+      "counterdiabatic driving",
+      "STIRAP",
+      "pulse shaping",
+      "composite pulses"
+     ]
+    },
+    {
+     "id": "neutral-atom-qubits",
+     "name": "Neutral-atom qubits",
+     "definition": "Rydberg-blockade gates, neutral-atom processors, and Rydberg arrays as programmable simulators",
+     "rules": {
+      "keywords": "rydberg blockade|neutral.atom (quantum|qubit|processor|computing)|rydberg gate|controlled.z gate.*(atom|rydberg)|atom array.*gate|rydberg (atom )?arrays?|programmable quantum simulator|neutral.atom arrays?|atom.array (processor|quantum computer)"
+     },
+     "clusters": [
+      "T04.6"
+     ],
+     "area_clusters": [
+      "T04.6"
+     ],
+     "search_terms": [
+      "neutral-atom quantum computing",
+      "Rydberg gates",
+      "atom arrays"
+     ]
+    },
+    {
+     "id": "trapped-ion-qubits",
+     "name": "Trapped-ion qubits",
+     "definition": "Paul and Penning traps, ion crystals, ion qubits, and entangling gates",
+     "rules": {
+      "keywords": "trapped.ion|ion trap|paul trap|penning trap|ion crystal|m[øo]lmer.s[øo]rensen|ion qubit|ion transport"
+     },
+     "clusters": [
+      "T04.2"
+     ],
+     "area_clusters": [
+      "T04.2"
+     ],
+     "search_terms": [
+      "trapped-ion quantum computing",
+      "ion trap",
+      "Mølmer-Sørensen",
+      "ion transport"
+     ]
+    },
+    {
+     "id": "color-center-qubits",
+     "name": "Color-center qubits",
+     "definition": "NV, SiV, erbium, and other defect spins, spin–photon interfaces, and solid-state memories",
+     "rules": {
+      "keywords": "nitrogen.vacancy|\\bnv center|colou?r cent|silicon.vacancy|diamond (spin|qubit|quantum)|spin.photon interface|rare.earth|er3\\+|\\bt center|divacanc"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T05.2"
+     ],
+     "search_terms": [
+      "colour centres",
+      "nitrogen-vacancy",
+      "silicon-vacancy",
+      "rare-earth ions",
+      "diamond"
+     ]
+    },
+    {
+     "id": "semiconductor-spin-qubits",
+     "name": "Semiconductor spin qubits",
+     "definition": "Control, readout, noise, and shuttling of electron and hole spins in silicon, germanium, and III-V quantum dots",
+     "rules": {
+      "keywords": "spin qubit|quantum dot.*spin|silicon (quantum|qubit|spin)|germanium.*(hole|qubit)|hole spin|double quantum dot|singlet.triplet|spin shuttling|donor spin"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T05.2"
+     ],
+     "search_terms": [
+      "silicon qubits",
+      "germanium hole spins",
+      "singlet-triplet",
+      "double quantum dots",
+      "donor spins"
+     ]
+    },
+    {
+     "id": "superconducting-qubits",
+     "name": "Superconducting qubits",
+     "definition": "Transmons, fluxonium, circuit QED, readout, and two-qubit gates",
+     "rules": {
+      "keywords": "superconducting qubit|transmon|fluxonium|circuit quantum electrodynamics|circuit qed|tunable coupler|dispersive readout|superconducting (quantum )?processor|two.level system.*(loss|superconduct)"
+     },
+     "clusters": [
+      "T05.1"
+     ],
+     "area_clusters": [
+      "T05.1"
+     ],
+     "search_terms": [
+      "Josephson qubits",
+      "tunable couplers",
+      "dispersive readout"
+     ]
+    },
+    {
+     "id": "superconducting-devices",
+     "name": "Superconducting devices",
+     "definition": "Josephson junctions and arrays, parametric amplifiers, single-photon detectors, and cryoelectronics",
+     "rules": {
+      "keywords": "josephson (junction|parametric|traveling)|parametric amplifier|traveling.wave parametric|kinetic inductance|nanowire single.photon detector|\\bsnspd\\b|transition.edge sensor|andreev|squid|cryogenic (electronics|link)"
+     },
+     "clusters": [],
+     "area_clusters": [
+      "T05.1"
+     ],
+     "search_terms": [
+      "SNSPD",
+      "transition-edge sensors",
+      "traveling-wave parametric amplifier",
+      "SQUID",
+      "kinetic inductance",
+      "Andreev"
+     ]
+    }
+   ]
+  }
+ ],
+ "platforms": [
+  {
+   "id": "photonic",
+   "name": "Photonics",
+   "definition": "Photonic qubits, linear optics, and integrated photonics",
+   "rules": {
+    "concepts": [
+     "Photonics",
+     "Photonic integrated circuit",
+     "Single-photon source",
+     "Boson sampling",
+     "Squeezed coherent state"
+    ],
+    "keywords": "photonic|single.photon|boson sampling|squeezed light|integrated optic|linear optic",
+    "arxiv": [
+     "physics.optics"
+    ],
+    "text": "photonic (chip|circuit|quantum|processor|integrated)|single.photon source|boson sampling|squeezed light|linear.optical quantum|integrated (quantum )?photonic"
+   }
+  },
+  {
+   "id": "neutral_atom",
+   "name": "Neutral atoms",
+   "definition": "Cold atoms, optical lattices, tweezer arrays, and Rydberg atoms",
+   "rules": {
+    "concepts": [
+     "Rydberg atom",
+     "Rydberg state",
+     "Optical tweezers",
+     "Optical lattice"
+    ],
+    "keywords": "rydberg|optical tweezer|neutral.atom|optical lattice|atom array",
+    "arxiv": [],
+    "text": "rydberg|optical tweezer|neutral.atom|atom arrays?|optical lattice"
+   }
+  },
+  {
+   "id": "trapped_ion",
+   "name": "Trapped ions",
+   "definition": "Atomic ions in Paul and Penning traps",
+   "rules": {
+    "concepts": [
+     "Ion trap",
+     "Trapped ion quantum computer"
+    ],
+    "keywords": "trapped.ion|ion trap|ion crystal",
+    "arxiv": [],
+    "text": "trapped.ion|ion trap|trapped [a-z0-9+]+ ions?|ion crystal"
+   }
+  },
+  {
+   "id": "color_centers",
+   "name": "Color centers",
+   "definition": "NV, SiV, and other defect spins",
+   "rules": {
+    "concepts": [
+     "Nitrogen-vacancy center",
+     "Diamond",
+     "Color center"
+    ],
+    "keywords": "nitrogen.vacancy|\\bnv\\b|colou?r cent|diamond|silicon.vacancy|divacanc",
+    "arxiv": [],
+    "text": "nitrogen.vacancy|\\bnv.?(cent|spin|defect|magnetometr)|colou?r cent(er|re)s?|silicon.vacancy|divacanc|\\bsiv\\b"
+   }
+  },
+  {
+   "id": "spin_semiconductor",
+   "name": "Semiconductor spins & dots",
+   "definition": "Gate-defined and self-assembled quantum dots, and donor spins",
+   "rules": {
+    "concepts": [
+     "Quantum dot",
+     "Spin qubit",
+     "Silicon"
+    ],
+    "keywords": "quantum dot|spin qubit|silicon qubit|donor|germanium",
+    "arxiv": [
+     "cond-mat.mes-hall"
+    ],
+    "text": "quantum dots?|spin qubits?|silicon (qubit|quantum)|donor spin|electron spin qubit|hole spin"
+   }
+  },
+  {
+   "id": "superconducting",
+   "name": "Superconducting circuits",
+   "definition": "Transmons, fluxonium, and other Josephson circuits",
+   "rules": {
+    "concepts": [
+     "Transmon",
+     "Superconducting quantum computing",
+     "Circuit quantum electrodynamics",
+     "Josephson effect"
+    ],
+    "keywords": "superconducting (qubit|circuit|quantum)|transmon|fluxonium|circuit qed|josephson",
+    "arxiv": [],
+    "text": "superconducting (qubit|circuit|quantum processor|resonator)|transmon|fluxonium|circuit qed|circuit quantum electrodynamics|josephson junction"
+   }
+  },
+  {
+   "id": "topological",
+   "name": "Topological qubits",
+   "definition": "Majorana devices and anyon-based qubits",
+   "rules": {
+    "concepts": [
+     "Majorana fermion",
+     "Topological quantum computer",
+     "Anyon"
+    ],
+    "keywords": "majorana|anyon|topological qubit|topological quantum comput",
+    "arxiv": [],
+    "text": "majorana|non.abelian anyons?|topological qubits?|topological quantum comput"
+   }
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+MERGE_THRESHOLD  = 2.0
+W_NAME           = 1.0
+W_NAME_INVERSION = 0.8
+W_INSTITUTION    = 1.0
+W_COAUTHOR       = 1.0
+W_CONCEPT        = 0.5

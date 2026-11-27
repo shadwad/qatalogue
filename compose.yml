@@ -1,0 +1,28 @@
+# On SELinux hosts (Fedora, RHEL), add `:z` to bind-mount volume entries.
+services:
+  web:
+    build:
+      context: .
+      target: runtime
+      args:
+        SITE_URL: ${SITE_URL:-}
+    ports:
+      - "${PORT:-3000}:3000"
+    volumes:
+      - ./data:/app/data:ro
+      - ./public:/app/public:ro
+    restart: unless-stopped
+
+  pipeline:
+    profiles: [pipeline]
+    build:
+      context: .
+      target: pipeline
+    volumes:
+      - .:/app
+      - qatalogue-node-modules:/app/node_modules
+      - qatalogue-venv:/app/.venv
+
+volumes:
+  qatalogue-node-modules:
+  qatalogue-venv:

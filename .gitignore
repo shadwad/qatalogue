@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Build outputs & logs
+dist/
+logs/
+*.log
+
+# Environment & local configuration
+.env*
+!.env.example
+site.config*.json
+!site.config.example.json
+public/*.png
+
+# Generated pipeline data, caches & reports
+*.db
+*.db-*
+*.db.tmp*
+data/models/
+data/article_overrides*.json
+!data/article_overrides.example.json
+data/suppressions*.json
+!data/suppressions.example.json
+data/merges*.json
+data/topics/assignment_model.json
+data/topics/assignment_report.md
+data/topics/article_types_report.md
+data/topics/discovery.json
+data/topics/discovery_report.md
+public/default-*.json.gz
+public/config/location_mapping.json
+public/config/venues.json
+public/config/corpus.json
+public/config/taxonomy.json
+
+# Local trial scopes
+pipeline/config/scope.*.json
+!pipeline/config/scope.example.json
+
+# Python & Vite caches
+__pycache__/
+*.py[cod]
+.vite/
+
+# Temp, backup, keys & OS files
+*.tmp
+*.bak
+*~
+*.swp
+*.pem
+*.key
+id_rsa*
+.DS_Store
+Thumbs.db

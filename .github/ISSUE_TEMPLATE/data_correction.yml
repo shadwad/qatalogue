@@ -1,0 +1,42 @@
+name: Data correction
+description: Report a wrong affiliation, split/merged profile, missing paper, or misclassification.
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues filed here are public. If you prefer to report a correction privately or request a researcher profile suppression, email [contact@qatalogue.org](mailto:contact@qatalogue.org) instead.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Record type
+      options:
+        - Researcher profile
+        - Institution
+        - Paper / article type
+        - Topic / platform assignment
+    validations:
+      required: true
+
+  - type: input
+    id: record
+    attributes:
+      label: Name and identifier
+      description: ORCID iD, OpenAlex ID, DOI, or link to the record on Qatalogue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What is wrong
+      description: Affiliation error, duplicate/merged records, missing or misclassified paper, etc.
+    validations:
+      required: true
+
+  - type: input
+    id: reference
+    attributes:
+      label: Reference link (optional)
+      placeholder: Institutional page, ORCID, DOI, or ROR entry

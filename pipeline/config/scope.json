@@ -1,0 +1,122 @@
+{
+  "years": {
+    "start": 2017,
+    "end": 2026
+  },
+  "corpus_topics": [
+    {
+      "openalex_id": "T10020",
+      "name": "Quantum Information and Cryptography"
+    },
+    {
+      "openalex_id": "T10682",
+      "name": "Quantum Computing Algorithms and Architecture"
+    },
+    {
+      "openalex_id": "T10622",
+      "name": "Quantum Mechanics and Applications"
+    },
+    {
+      "openalex_id": "T11414",
+      "name": "Quantum Optics and Atomic Interactions"
+    },
+    {
+      "openalex_id": "T11804",
+      "name": "Quantum Many-Body Systems"
+    },
+    {
+      "openalex_id": "T10425",
+      "name": "Cold Atom Physics and Bose-Einstein Condensates"
+    },
+    {
+      "openalex_id": "T12612",
+      "name": "Strong Light-Matter Interactions"
+    },
+    {
+      "openalex_id": "T10022",
+      "name": "Semiconductor Quantum Structures and Devices"
+    }
+  ],
+  "venues": [
+    {
+      "openalex_id": "S4210195673",
+      "name": "PRX Quantum",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S24807848",
+      "name": "Physical Review Letters",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S137042341",
+      "name": "Physical Review X",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S164566984",
+      "name": "Physical Review A",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S2764453006",
+      "name": "Physical Review Applied",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S137773608",
+      "name": "Nature",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S64187185",
+      "name": "Nature Communications",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S156274416",
+      "name": "Nature Physics",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S120392215",
+      "name": "Nature Photonics",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S7822423",
+      "name": "Nature Nanotechnology",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S103895331",
+      "name": "Nature Materials",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S2738600312",
+      "name": "npj Quantum Information",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S3880285",
+      "name": "Science",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S2737427234",
+      "name": "Science Advances",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S4210226432",
+      "name": "Quantum",
+      "requires_topic_filter": true
+    },
+    {
+      "openalex_id": "S4210177720",
+      "name": "Quantum Science and Technology",
+      "requires_topic_filter": true
+    }
+  ]
+}
